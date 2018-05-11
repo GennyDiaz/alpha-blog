@@ -1,6 +1,15 @@
 
 <h1>Create An Article</h1>
 
+<% if @article.errors.any? %>
+	<h4>The following errors prevented the article from getting created.</h4>
+	<ul>
+		<% @article.errors.full_messages.each do |msg| %>
+		<li><%= msg %></li>
+		<% end %>
+	</ul>
+<% end %>
+
 <%= form_for @article do |f| %>
 
 	<p>
@@ -14,7 +23,7 @@
 	</p>
 	
 	<p>
-		<%= f.submit %>
+		<%= f.submit :submit%>
 	</p>
 
 <% end %>
