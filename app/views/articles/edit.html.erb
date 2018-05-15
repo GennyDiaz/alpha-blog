@@ -1,5 +1,5 @@
 
-<h1>Create An Article</h1>
+<h1>Edit Article</h1>
 
 <% if @article.errors.any? %>
 	<h4>The following errors prevented the article from getting created.</h4>
@@ -23,9 +23,10 @@
 	</p>
 	
 	<p>
-		<%= f.submit :submit%>
+		<%= f.submit %>
 	</p>
 
 <% end %>
+
 
 <%= link_to "Back to article lising", articles_path %>
