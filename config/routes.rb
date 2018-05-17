@@ -6,4 +6,9 @@ get 'about', to: 'pages#about'
 
 #gives CRUD paths
 resources :articles
+
+get 'signup', to: 'users#new'
+#post 'users', to: 'users#create'
+#same as below
+resources :users, except: [:new]
 end
